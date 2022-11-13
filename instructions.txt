@@ -1,0 +1,23 @@
+
+
+
+To fetch or read data:
+
+s1-> truffle console
+s2-> Election.deployed().then(function(i){app=i;})
+s3-> app.Candidates()
+s4-> app.Candidates(1).then(function(i){candidate=i;return candidate;})
+s5-> access it using candidate.var_name or candidate[index];
+
+
+For testing:
+s->truffle test
+
+
+To run the client side of an application:
+
+s->npm run dev
+
+
+
+
