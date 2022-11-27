@@ -17,12 +17,12 @@ contract("Election", function (accounts) {
       return electionInstance.Candidates(1);
     }).then(function (candidate) {
       assert.equal(candidate[0], 1, "contains the correct id");
-      assert.equal(candidate[1], "Aryan", "contains the correct name");  // verifying users1 name (current name= "candidate2")
+      assert.equal(candidate[1], "Aryan", "contains the correct name");  // verifying users1 name (current name= "Aryan")
       assert.equal(candidate[2], 0, "contains the correct votes count");
       return electionInstance.Candidates(2);
     }).then(function (candidate) {
       assert.equal(candidate[0], 2, "contains the correct id");
-      assert.equal(candidate[1], "Sajal", "contains the correct name");  //verifying users2 name  (current name= "candidate2")
+      assert.equal(candidate[1], "Sajal", "contains the correct name");  //verifying users2 name  (current name= "Sajal")
       assert.equal(candidate[2], 0, "contains the correct votes count");
     });
   });
@@ -87,7 +87,7 @@ contract("Election", function (accounts) {
       return electionInstance.Candidates(2);
     }).then(function (candidate2) {
       var voteCount = candidate2[2].toNumber();
-      assert.equal(voteCount, 1, "candidate 2 did not receive any votes");  //make it zero , (one candidate will receive vote and other will note)
+      assert.equal(voteCount, 0, "candidate 2 did not receive any votes");  //make it zero , (one candidate will receive vote and other will note)
     });
 
   });

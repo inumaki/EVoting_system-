@@ -53,6 +53,9 @@ App = {
   },
 
   render: function() {
+   
+    var temp_Store= document.getElementById("candidatesResults");
+
     var electionInstance;
     var loader = $("#loader");
     var content = $("#content");
@@ -73,13 +76,17 @@ App = {
       electionInstance = instance;
       return electionInstance.Count();
     }).then(function(candidatesCount) {
+      
       var candidatesResults = $("#candidatesResults");
+      //console.log(candidatesResults)
       candidatesResults.empty();
 
       var candidatesSelect = $('#candidatesSelect');
       candidatesSelect.empty();
 
+      
       for (var i = 1; i <= candidatesCount; i++) {
+
         electionInstance.Candidates(i).then(function(candidate) {
           var id = candidate[0];
           var name = candidate[1];

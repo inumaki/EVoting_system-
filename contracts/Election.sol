@@ -18,8 +18,12 @@ contract Election {
 constructor () public
 {
 
-add_Candidate("Aryan");
-add_Candidate("Sajal");
+add_Candidate("Candidate 1");
+add_Candidate("Candidate 2");
+add_Candidate("Candidate 3");
+add_Candidate("Candidate 4");
+add_Candidate("Candidate 5");
+
 
 }
 
@@ -65,6 +69,6 @@ Candidates[Count]= Candidate(Count,_name,0);
         Candidates[_candidateId].voteCount ++; //updating number of votes given
 
         // trigger voted event
-       emit votedEvent(_candidateId); //saving logs
+       emit votedEvent(_candidateId); //saving logs on blockchain
     }
 }
