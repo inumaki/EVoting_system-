@@ -1,0 +1,74 @@
+
+main {
+    margin-top: 60px;
+  }
+  #content {
+    display: none;
+  }
+  form {
+    width: 350px;
+    margin-bottom: 10px;
+  }
+  ul{
+    margin-bottom: 0px;
+  }
+  #completedTaskList .content {
+    color: grey;
+    text-decoration: line-through;
+  } 
+  h1 {
+    color: #fff;
+    padding: 10px;
+  }
+    
+  .box {
+    max-width: 600px;
+    margin: 44px auto;
+    color: white;
+    background:#000000;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .account{
+      text-decoration: none;
+      color: white;
+  }
+  .account:hover{
+      text-decoration: none;
+      color: white;
+  }
+  .sbutton
+  {
+    margin:10px;
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
+    border-radius: 2px;
+    
+  }
+  .canbutton
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .taskTemplate
+  {
+    background-color: #000000;
+    color:white;
+    font-weight: 500;
+    margin:5px;
+    padding:5px;
+    border-radius: 5px;
+  
+  
+  }
+  
+  .container-fluid
+  {
+width:50%;
+
+
+  }

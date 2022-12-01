@@ -15,24 +15,24 @@ contract Election {
 
 
 
-constructor () public
-{
+// constructor () public
+// {
 
-add_Candidate("Candidate 1");
-add_Candidate("Candidate 2");
-add_Candidate("Candidate 3");
-add_Candidate("Candidate 4");
-add_Candidate("Candidate 5");
+// add_Candidate("Candidate 1");
+// add_Candidate("Candidate 2");
+// add_Candidate("Candidate 3");
+// add_Candidate("Candidate 4");
+// add_Candidate("Candidate 5");
 
 
-}
+// }
 
 
 //storing candidates information
 mapping(uint=>Candidate) public Candidates;
 uint public Count;
 
-function add_Candidate(string memory _name) private {
+function add_Candidate(string memory _name) public {
 Count++;
 Candidates[Count]= Candidate(Count,_name,0);
 
