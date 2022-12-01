@@ -1,3 +1,4 @@
+
 App = {
   web3Provider: null,
   contracts: {},
@@ -30,7 +31,7 @@ App = {
       App.contracts.Election.setProvider(App.web3Provider);
 
       App.listenForEvents();
-
+      document.getElementById("candidatesResults").innerHTML=""
       return App.render();
     });
   },
@@ -46,14 +47,17 @@ App = {
         toBlock: 'latest'
       }).watch(function(error, event) {
         console.log("event triggered", event)
-        // Reload when a new vote is recorded
-        App.render();
+   
+        document.getElementById("candidatesResults").innerHTML=""
+         App.render();
       });
     });
   },
 
   render: function() {
-   
+ 
+ 
+
     var temp_Store= document.getElementById("candidatesResults");
 
     var electionInstance;
@@ -76,24 +80,48 @@ App = {
       electionInstance = instance;
       return electionInstance.Count();
     }).then(function(candidatesCount) {
-      
+     
       var candidatesResults = $("#candidatesResults");
-      //console.log(candidatesResults)
+      console.log(candidatesResults)
       candidatesResults.empty();
-
+     
       var candidatesSelect = $('#candidatesSelect');
       candidatesSelect.empty();
-
       
-      for (var i = 1; i <= candidatesCount; i++) {
+      document.addEventListener("DOMContentLoaded", function(e) { 
 
+
+        var div = document.getElementById('candidatesResults');
+        console.log(div)
+        var childDivs = div.getElementsByTagName('div');
+  console.log(childDivs)
+     
+      
+      })
+   
+
+
+
+      // for( i=0; i< childDivs.length; i++ )
+      // {
+      //  var childDiv = childDivs[i];
+      //  console.log(childDiv)
+      // }
+
+//loop-----------------------------------------------------------------------------------------------
+     
+      for (let i = 1; i <= 5; i++) {
+       
         electionInstance.Candidates(i).then(function(candidate) {
+         
+        //   console.log(candidate , `i = ${i}`)
+        //  console.log("----------")
           var id = candidate[0];
           var name = candidate[1];
           var voteCount = candidate[2];
 
           // Render candidate Result
-          var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
+          var candidateTemplate = "<div class='flex items-center justify-between pb-5'><p class='text-lg mx-auto font-bold m-4 text-white'>" + id + "</p>" + "<p class='text-lg mx-auto font-bold m-4 text-white'>" + name + "</p>" + "<p class='text-lg mx-auto font-bold m-4 text-white'>" + voteCount + "</p></div>"
           candidatesResults.append(candidateTemplate);
 
           // Render candidate ballot option

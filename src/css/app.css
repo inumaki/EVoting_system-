@@ -1,40 +1,46 @@
 body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0px;
-    background: #ddd;
-    font-family: Roboto, sans-serif;
-    font-weight: bold;
-  }
+
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+.head
+{
+
+font-size: 1.5rem;
+
+}
   
   a {
-    color: black;
+ 
+    color:white;
     text-decoration: none;
     cursor: grab;
   }
-  
+
   .Button {
+    font-size: medium;
+    color: ;
     position: relative;
     top: 0px;
     padding: 15px 25px;
-    border: solid #1a1a1a 3px;
+    border: solid #61FFE4 3px;
     border-radius: 20px;
-    margin: 10px;
-    box-shadow: 0px 10px 0px #1a1a1a;
-margin-right: 100px ;
+    margin: 25px 50%;
+    box-shadow: 0px 10px 0px #61FFE4;
+    background-color:#61FFE4;
+    
   }
   
   .Button:hover {
-    transition: 100ms ease;
     top: 2px;
-    box-shadow: 0px 8px 0px #1a1a1a;
+    box-shadow: 0px 8px 0px #61FFE4;
   }
   .Button:active {
+    background: #61FFE4;
+    transition: 100ms ease;
     top: 8px;
-    box-shadow: 0px 2px 0px #1a1a1a;
+    box-shadow: 0px 2px 0px #61FFE4;
   }
   
   .White {
@@ -44,33 +50,8 @@ margin-right: 100px ;
     background: #eee;
   }
   .White:active {
-    background: #ddd;
+    background: #4CE8A1;
   }
-  .Yellow {
-    background: #ffc300;
-  }
-  .Yellow:hover {
-    background: #efb300;
-  }
-  .Yellow:active {
-    background: #dfa300;
-  }
-  .Red {
-    background: #d22b2b;
-  }
-  .Red:hover {
-    background: #c21b2b;
-  }
-  .Red:active {
-    background: #b20b2b;
-  }
+
+
   
-  ::selection {
-    color: Black;
-    background: #00000000;
-  }
-  ::-moz-selection {
-    color: Black;
-    background: #00000000;
-  }
-  /*t
