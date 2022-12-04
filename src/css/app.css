@@ -1,5 +1,5 @@
 *{
-
+background-color:black;
 
 
 }
@@ -61,4 +61,10 @@ font-size: 1.5rem;
   }
 
 
-  
+  .candidatebox
+  {
+
+font-size: larger;
+color:white;
+
+  }

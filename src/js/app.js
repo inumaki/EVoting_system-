@@ -123,7 +123,7 @@ App = {
           var voteCount = candidate[2];
 
           // Render candidate Result
-          var candidateTemplate = "<div class='flex items-center justify-between pb-5'><p class='text-lg mx-auto font-bold m-4 text-white'>" + id + "</p>" + "<p class='text-lg mx-auto font-bold m-4 text-white'>" + name + "</p>" + "<p class='text-lg mx-auto font-bold m-4 text-white'>" + voteCount + "</p></div>"
+          var candidateTemplate = "<div class='flex items-center justify-between pb-5'><p class='text-lg mx-auto font-bold m-4 text-white'>" + id + "</p>" + "<p class='text-lg mx-auto font-bold m-4 text-white'>" + name + "</p>" + "</div>"
           candidatesResults.append(candidateTemplate);
 
           // Render candidate ballot option

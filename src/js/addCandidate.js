@@ -1,3 +1,37 @@
+localStorage.setItem("hasStarted",false)
+
+function disableButton()
+{
+  let hasstarted = localStorage.getItem('hasStarted')
+
+  if(hasstarted=='true')
+  hasstarted=false;
+  else
+  hasstarted=true;
+
+  localStorage.setItem("hasStarted",hasstarted)
+  const sbutton = document.querySelector('.sbutton')
+let togglebutton = document.querySelector('.startVoting')
+
+console.log(hasstarted)
+
+  if(hasstarted==true)
+  {
+    togglebutton.innerHTML= "End Voting Phase"
+    console.log("inside true")
+      sbutton.disabled=true;
+  }
+  else
+  {
+    togglebutton.innerHTML= "Start Voting Phase"
+    console.log("inside false")
+    sbutton.disabled=false;
+  }
+
+
+
+}
+
 
 App = {
     loading: false,
@@ -70,6 +104,9 @@ App = {
     //renders the front end of the client-side webpage
     render: async () => {
       // Prevent double render
+
+
+
       if (App.loading) {
         return
       }
