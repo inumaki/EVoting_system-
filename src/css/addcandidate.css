@@ -1,4 +1,6 @@
 
+
+
 main {
     margin-top: 60px;
   }
@@ -60,9 +62,10 @@ main {
     color:white;
     font-weight: 500;
     margin:5px;
-    padding:5px;
+ 
+    padding:10px;
     border-radius: 5px;
-  
+ padding-left:20px; 
   
   }
   

@@ -2,6 +2,12 @@
     height: 100%;
 
 }
+body{
+  height: 100%;
+  width: 100%;
+  background-image:url('loginimage.jpg')
+  
+  }
 
 a {
     text-decoration: none;

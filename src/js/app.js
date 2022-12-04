@@ -9,8 +9,7 @@ App = {
     return App.initWeb3();
   },
 
-  initWeb3: function() {    
-    //connect client side application to local blockchain
+  initWeb3: function() {    //connect client side application to local blockchain
     // TODO: refactor conditional
     if (typeof web3 !== 'undefined') {
       // If a web3 instance is already provided by Meta Mask.
@@ -55,13 +54,12 @@ App = {
     });
   },
 
-  render: function() {
+  render: async() =>{
  
- if(App.loading)
- {
-  return
- }
+ 
 
+
+ 
     var temp_Store= document.getElementById("candidatesResults");
 
     var electionInstance;
@@ -113,7 +111,7 @@ App = {
       // }
 
 //loop-----------------------------------------------------------------------------------------------
-     
+
       for (let i = 1; i <= candidatesCount; i++) {
        
         electionInstance.Candidates(i).then(function(candidate) {

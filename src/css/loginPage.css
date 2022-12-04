@@ -1,0 +1,213 @@
+*{
+  padding:100px;
+}
+body{
+  height: 100%;
+  width: 100%;
+  background-image:url('loginimage.jpg')
+  
+  }
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --transparent: transparent;
+  --black: #000;
+  --white: #fff;
+
+  --gunmetal-100: #d4d5d7;
+  --gunmetal-200: #9b9da1;
+  --gunmetal-400: #63656a;
+  --gunmetal-500: #2a2d34;
+  --gunmetal-800: #17191d;
+
+  --blue-400: #6caef1;
+  --blue-500: #3c91e6;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+input,
+button {
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+/* CSS */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--gunmetal-800);
+  color: var(--gunmetal-200);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ph-dog {
+  font-size: 115px;
+  color: var(--blue-500);
+}
+
+.title {
+  color: var(--gunmetal-100);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+
+.good {
+  color: var(--gunmetal-400);
+  font-size: 1.125rem;
+  margin-top: 0.6rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 400px;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.label-email,
+.label-password,
+.label-remember {
+  display: flex;
+}
+
+.label-email,
+.label-password {
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.label-remember {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.email-span,
+.password-span {
+  color: var(--gunmetal-200);
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.input-email-container,
+.input-password-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background-color: var(--gunmetal-500);
+  border-radius: 0.25rem;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.input-email-container:focus-within,
+.input-password-container:focus-within {
+  box-shadow: inset 0 0 0 calc(2px + 0px) var(--blue-500);
+}
+
+.input-email-container i,
+.input-password-container i {
+  font-size: 24px;
+}
+
+.input-email,
+.input-password {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: var(--gunmetal-200);
+  background-color: var(--transparent);
+  outline: none;
+  flex: 1;
+}
+
+.input-email::placeholder,
+.input-password::placeholder {
+  color: var(--gunmetal-400);
+}
+
+.input-verify {
+  display: none;
+}
+
+.btn-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 2px;
+  background-color: var(--gunmetal-500);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-checkbox .ph-check {
+  display: block;
+  color: var(--blue-500);
+  font-size: 20px;
+}
+
+.btn-sign-in {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem 1rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--blue-500);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  cursor: pointer;
+}
+
+.btn-sign-in:hover {
+  background-color: var(--blue-400);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.footer-link {
+  color: var(--gunmetal-400);
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-decoration: underline;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.footer-link:hover {
+  color: var(--gunmetal-200);
+}
