@@ -23,25 +23,26 @@ main {
   h1 {
     color: #fff;
     padding: 10px;
+
   }
     
   .box {
     max-width: 600px;
     margin: 44px auto;
-    color: white;
-    background:#000000;
+    color:black;
+    background:#d8d8d8;
     border-radius: 5px;
-    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 15px -5px #a5a2a2;
     text-align: center;
   }
   
   .account{
       text-decoration: none;
-      color: white;
+      color: black;
   }
   .account:hover{
       text-decoration: none;
-      color: white;
+      color: black;
   }
   .sbutton
   {
@@ -60,11 +61,16 @@ main {
   
   .taskTemplate
   {
-    background-color: #000000;
-    color:white;
+    display: flex;
+
+    background-color:#d8d8d8;
+
+    box-shadow: 2px 2px 15px -5px #b1aeae;
+    color:black;
     font-weight: 500;
     margin:5px;
- 
+    margin-bottom: 8px;
+ margin-right:15px ;
     padding:10px;
     border-radius: 5px;
  padding-left:20px; 
@@ -73,7 +79,27 @@ main {
   
   .container-fluid
   {
-width:50%;
+
 
 
   }
+  .mainbox
+{
+  
+  height: 100vh;
+margin:5px auto;
+  width: 50%;
+    border: 5px solid #a6a3a3 ;
+    box-shadow: 5px 5px 15px -5px #a5a2a2;
+    border-radius: 3px;
+}
+.block
+{
+  margin: 5px;
+border:2px solid rgb(49, 43, 226);
+background-color: rgb(49, 43, 226);
+height: 10px;
+width: 20px;
+margin-right: 15px;
+border-radius: 4px;
+}
