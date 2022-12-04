@@ -15,7 +15,7 @@ console.log(email.value)
 console.log(password.value)
  if( email.value==="aryankatiyar123" && password.value==="13547978a987bd9a74a72887ecb1d66e7b27dfa345b312f9252b59d653cba56a")
  {    
-  window.location.href = 'addcandidate.html';
+  window.location.href = 'resultPage.html';
  }
 else
 {

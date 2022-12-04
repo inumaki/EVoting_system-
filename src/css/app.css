@@ -1,11 +1,12 @@
 *{
-background-color:black;
+
+background-color:rgb(246, 246, 237);
 
 
 }
 
 body {
-height:100vh;
+  height:100%;
   font-family: Roboto, sans-serif;
   font-weight: bold;
  color: black;

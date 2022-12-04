@@ -1,36 +1,66 @@
-localStorage.setItem("hasStarted",false)
-
-function disableButton()
+async function disableButton()
 {
-  let hasstarted = localStorage.getItem('hasStarted')
 
-  if(hasstarted=='true')
+  const data = await axios.get("http://localhost:3020/getTimerValue").then(res=>res.data.data);
+  //console.log(data);
+let hasstarted = data.value
+//console.log("hasstarted",hasstarted);
+  if(hasstarted===true)
   hasstarted=false;
   else
   hasstarted=true;
 
-  localStorage.setItem("hasStarted",hasstarted)
   const sbutton = document.querySelector('.sbutton')
 let togglebutton = document.querySelector('.startVoting')
 
-console.log(hasstarted)
-
-  if(hasstarted==true)
+if(hasstarted===true)
   {
+    sbutton.style.backgroundColor= 'grey';
+    togglebutton.style.backgroundColor='red';
     togglebutton.innerHTML= "End Voting Phase"
-    console.log("inside true")
       sbutton.disabled=true;
   }
   else
   {
+    sbutton.style.backgroundColor= 'yellowgreen';
+    togglebutton.style.backgroundColor='yellowgreen';
     togglebutton.innerHTML= "Start Voting Phase"
-    console.log("inside false")
+    sbutton.disabled=false;
+  }
+
+  const updatedata = await axios.post("http://localhost:3020/getTimerValue").then(res=>res.data.data);
+ // console.log("updated",updatedata);
+
+}
+async function setState()
+{
+
+const data = await axios.get("http://localhost:3020/getTimerValue").then(res=>res.data.data);
+
+let hasstarted = data.value
+const sbutton = document.querySelector('.sbutton')
+let togglebutton = document.querySelector('.startVoting')
+
+if(hasstarted===true)
+  {
+    sbutton.style.backgroundColor= 'grey';
+    togglebutton.style.backgroundColor='red';
+    togglebutton.innerHTML= "End Voting Phase"
+      sbutton.disabled=true;
+  }
+  else
+  {
+    sbutton.style.backgroundColor= 'yellowgreen';
+    togglebutton.style.backgroundColor='yellowgreen';
+    togglebutton.innerHTML= "Start Voting Phase"
     sbutton.disabled=false;
   }
 
 
-
 }
+
+
+setState()
 
 
 App = {

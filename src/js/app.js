@@ -1,4 +1,29 @@
+async function setState()
+{
 
+const data = await axios.get("http://localhost:3020/getTimerValue").then(res=>res.data.data);
+
+let hasstarted = data.value
+const sbutton = document.querySelector('#sbutton')
+
+
+if(hasstarted===true)
+  {
+    sbutton.style.backgroundColor= 'yellowgreen';
+    sbutton.innerHTML= "Vote"
+      sbutton.disabled=false;
+  }
+  else
+  {
+    sbutton.style.backgroundColor= 'red';
+    sbutton.innerHTML= "X"
+    sbutton.disabled=true;
+    window.location.href = 'addcandidate.html';
+  }
+
+
+
+}
 App = {
   web3Provider: null,
   contracts: {},
@@ -49,7 +74,13 @@ App = {
         console.log("event triggered", event)
    
         document.getElementById("candidatesResults").innerHTML=""
+        if(hasVoted) {
+          $('form').hide();
+        } 
+
          App.render();
+
+
       });
     });
   },
@@ -58,7 +89,7 @@ App = {
  
  
 
-
+setState()
  
     var temp_Store= document.getElementById("candidatesResults");
 
@@ -123,7 +154,7 @@ App = {
           var voteCount = candidate[2];
 
           // Render candidate Result
-          var candidateTemplate = "<div class='flex items-center justify-between pb-5'><p class='text-lg mx-auto font-bold m-4 text-white'>" + id + "</p>" + "<p class='text-lg mx-auto font-bold m-4 text-white'>" + name + "</p>" + "</div>"
+          var candidateTemplate = "<div class='flex items-center justify-between pb-5 bg-yellow-50 border-2 border-orange-200'><p class='text-lg mx-auto font-bold m-4 text-black bg-yellow-50 '>" + id + "</p>" + "<p class='text-lg mx-auto font-bold m-4 text-black bg-yellow-50 '>" + name + "</p>" + "</div>"
           candidatesResults.append(candidateTemplate);
 
           // Render candidate ballot option
@@ -133,7 +164,7 @@ App = {
       }
       return electionInstance.voters(App.account);
     }).then(function(hasVoted) {
-      // Do not allow a user to vote
+      
       if(hasVoted) {
         $('form').hide();
       }

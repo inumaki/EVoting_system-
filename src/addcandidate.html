@@ -13,7 +13,7 @@
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/addcandidate.css" rel="stylesheet">
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +41,8 @@
          <form onSubmit="App.add_Candidate(); return false;">
           <div class="canbutton">  
           <input id="newTask" type="text" class="form-control" placeholder="Add New Candidate" required>
-              <input class="sbutton"type="submit" value="Add Candidate" >
+              <!-- <input class="sbutton"type="submit" value="Add Candidate" > --> 
+              <button  class="sbutton">Add Candidate</button>
             </div>
             </form>
             

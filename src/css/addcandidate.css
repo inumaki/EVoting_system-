@@ -1,6 +1,9 @@
 body {
   height: 100vh;
 }
+input[type='button']{
+  cursor:'pointer';
+  }
 
 main {
   margin-top: 60px;
@@ -51,13 +54,14 @@ h1 {
 }
 
 .sbutton {
+  width: 100%;
   margin: 10px;
   border: none;
   padding: 10px;
   background-color: greenyellow;
   color: black;
   border-radius: 2px;
-  cursor:move;
+  cursor:pointer;
   border-radius: 20px;
 
   box-shadow: 5px 5px 15px -5px #a5a2a2;
@@ -111,11 +115,12 @@ h1 {
 }
 
 .startVoting {
+  z-index: 999;
   border: none;
   background-color: greenyellow;
   border-radius: 20px;
   padding: 1rem;
-
+cursor: pointer;
   box-shadow: 5px 5px 15px -5px #a5a2a2;
 
 }
